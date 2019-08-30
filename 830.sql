@@ -137,6 +137,13 @@ DBMS_OUTPUT.PUT_LINE(sqlerrm);
 end;
 
 
+savepoint student_One;
+
+delete * from student where student_id=5;
+
+rollback to student_One;
+
+commit;
 
 
 
