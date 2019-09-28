@@ -16,3 +16,11 @@ references salespeople(snum);
 
 
 
+
+/*alter table*/
+delete from salespeople where snum=1009;
+delete from salespeople where snum=1010;
+
+update cust
+set city='Rome'
+where cnum=2006;
