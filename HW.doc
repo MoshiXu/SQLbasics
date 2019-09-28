@@ -1,0 +1,25 @@
+Total number of orders every salesperson had.(Orders table)
+
+How many orders where placed on Oct 05 94?
+
+On what date there was a lowest amount order was palced?
+
+How many orders where taken in total on oct 3 and oct 4th
+
+List the details of salesperson according their increasing order commission they receive
+
+Get all salespeople who lives in either in Barcelona or in london.
+
+Minimum order made by every customer (orders table)
+List the Average order received per  every date and sort them in increasing order
+
+Get all the cust  data whose name starts with G
+
+
+Create books table —columns bookid(has to be a sequence starting from 1256,primary key), book_name,book_author
+Create lending_table——columns  bookId(seq,foreign key), person_id(Primary Key),date_taken
+
+Insert some records to both tables
+Make sure data integrity is maintained when inserting records
+
+Get the minimum rating of customer aacording to every city  (1.city,2.MIn_Rating)
