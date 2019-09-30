@@ -1,5 +1,5 @@
 /*Total number of orders every salesperson had.(Orders table)*/
-  select count(snum) from orders group by city;
+  select count(snum) from orders;
   
 /*How many orders where placed on Oct 05 94?*/
   select count(odate) from orders where odate='05-OCT-94';
