@@ -1,0 +1,131 @@
+
+
+Sql		
+Dql	Data Query Language
+Dml
+Ddl
+tcl
+
+
+Create
+Drop
+
+Data manipulation(Create,Update,Delete)
+
+Primary Key
+Foreign Key
+
+
+JOIN,LEFT JOIN,RIGHT JOIN,OUTER JOIN
+Select sname,city,cust.cname 
+from salespeople 
+inner join cust 
+on cust.snum=salespeople.snum;
+
+
+Left outer join
+
+Full outer join
+
+Select salespeople.sname,cust.city,cust.cname from salespeople,cust where cust.snum=salespeople.snum;
+
+
+UNION, UNION ALL
+Select city from salespeople union all select city from cust;
+
+
+Select extract(year from sysdate) from dual;
+
+CURRENT_TIMESTAMP
+
+
+CHARACTER FUNCTION
+NUMBER FUNCTION	
+
+
+Select concat(‘hello’,’apolis’)from dual;
+Select ceil(12.4) from dual;
+
+
+select current_timestamp from dual;
+select * from dual;
+
+select sysdate from dual;
+
+Select extract(year from sysdate) from dual;
+
+
+declare
+s_char varchar(10) := 'chicago';
+sOne_char s_char%type;
+sOne_char varchar(10);
+begin
+dbms_output.put_line(s_char);
+end;
+
+
+create table student(studentname varchar(10),studentage number(3));
+
+
+declare
+s_record student%ROWTYPE;
+begin
+s_record.studentname:='John';
+s_record.studentage:=20;
+dbms_output.put_line(s_record.studentname);
+dbms_output.put_line(s_record.studentage);
+dbms_output.put_line(s_record.studentssn);
+end;
+
+
+declare
+type student_record is record(s_record student%ROWTYPE,studentssn number(3));
+
+recordOne student_record;
+
+begin
+recordOne.studentssn:=123;
+recordOne.s_record.studentname:='tom';
+dbms_output.put_line(recordOne.studentssn);
+dbms_output.put_line(recordOne.s_record.studentname);
+end;
+
+Dotatype
+Exceptions
+Loops
+
+Anonymous block
+
+Procedures
+
+
+
+
+
+
+8/30/2019
+
+Create or replace procedure emp_salary(p_emp_id in number,p_emp_sal out number)as
+Random_number number;
+Begin
+Select emp_sal into p_emp_sal from employees where emp_id=p_emp_id;
+dbms_output.put_line(p_emp_sal);
+Exception
+When others then
+dbms_output.put+line(sqlerrm);
+End emp_salary;
+
+declare
+emp_id_exec number:=20;
+emp_sal_exec number;
+begin
+emp_salary(emp_id_exec,emp_sal_exec);
+end;
+
+Producer
+Function
+Cursor
+Trigger
+
+System restore
+	savepoint
