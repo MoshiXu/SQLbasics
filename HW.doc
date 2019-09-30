@@ -1,9 +1,9 @@
 Total number of orders every salesperson had.(Orders table)
-
+  select sum(amt) from orders;
 How many orders where placed on Oct 05 94?
-
+  select count(*) from orders where odate='05-OCT-94';
 On what date there was a lowest amount order was palced?
-
+  select odate,amt from orders order by amt limit 1;
 How many orders where taken in total on oct 3 and oct 4th
 
 List the details of salesperson according their increasing order commission they receive
