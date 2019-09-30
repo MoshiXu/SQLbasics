@@ -28,11 +28,11 @@
 /*Create books table —columns bookid(has to be a sequence starting from 1256,primary key), book_name,book_author
 Create lending_table——columns  bookId(seq,foreign key), person_id(Primary Key),date_taken*/
   create sequence s increment by 1 start with 1256;
-  create table books(bookid number ,book_name varchar(20),book_author varchar(20),constraint primary key(book_id));
+  create table books(book_id number ,book_name varchar(20),book_author varchar(20),constraint primary key(book_id));
 
 /*Insert some records to both tables
 Make sure data integrity is maintained when inserting records*/
-  insert into books(bookid,book_name,book_author) values(s.nextval,'BOOKNAME','AUTHOR');
+  insert into books(book_id,book_name,book_author) values(s.nextval,'BOOKNAME','AUTHOR');
 
 /*Get the minimum rating of customer aacording to every city  (1.city,2.MIn_Rating)*/
   select city, min(rating) as Min_Rating from cust group by city;
