@@ -27,7 +27,7 @@ Get all the cust  data whose name starts with G
 
 Create books table —columns bookid(has to be a sequence starting from 1256,primary key), book_name,book_author
 Create lending_table——columns  bookId(seq,foreign key), person_id(Primary Key),date_taken
-  create sequence s increment by 1 start with 1;
+  create sequence s increment by 1 start with 1256;
   create table books(bookid number ,book_name varchar(20),book_author varchar(20),constraint primary key(book_id));
 
 Insert some records to both tables
