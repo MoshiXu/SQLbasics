@@ -20,8 +20,10 @@
   select min(count(*)) from orders group by cnum;
 
 /*List the Average order received per  every date and sort them in increasing order*/
-  select avg(count(odate)) from orders group by odate asc;
+  /*select avg(count(odate)) from orders group by odate asc;*/
+select odate,count(odate) from orders group by odate order by count(odate) asc;
 
+                   
 /*Get all the cust  data whose name starts with G*/
   select * from cust where cname like 'G%';
 
