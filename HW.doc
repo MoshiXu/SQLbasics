@@ -32,7 +32,7 @@ Create lending_table——columns  bookId(seq,foreign key), person_id(Primary Ke
 
 Insert some records to both tables
 Make sure data integrity is maintained when inserting records
-insert into books values(s.nextval,'BOOKNAME','AUTHOR';
+insert into books(bookid,book_name,book_author) values(s.nextval,'BOOKNAME','AUTHOR');
 
 Get the minimum rating of customer aacording to every city  (1.city,2.MIn_Rating)
 select city, min(rating) as Min_Rating from cust group by city;
