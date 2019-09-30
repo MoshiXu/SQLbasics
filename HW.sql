@@ -6,6 +6,8 @@
   
 /*On what date there was a lowest amount order was palced?*/
   select odate from orders order by amt limit 1;
+  select odate,amt from orders where amt=(select min(amt) as amount from orders);
+
   
 /*How many orders where taken in total on oct 3 and oct 4th*/
   select count(odate) from orders where odate='03-OCT-94' or odate='04-OCT-94';
