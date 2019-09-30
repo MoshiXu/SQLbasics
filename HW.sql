@@ -17,7 +17,7 @@
   select sname from salespeople where city='Barcelona' or city='London';
 
 /*Minimum order made by every customer (orders table)*/
-  select min(count(*)) from orders;
+  select min(count(*)) from orders group by cnum;
 
 /*List the Average order received per  every date and sort them in increasing order*/
   select avg(count(odate)) from orders group by odate asc;
