@@ -38,6 +38,8 @@ groupby, having
 
 sequence
 
+union
+
 normalization
 --redundacy/dependency of data
 
