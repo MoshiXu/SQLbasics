@@ -38,6 +38,11 @@ groupby, having
 
 sequence
 
+select * from dual;
+
+union
+
+
 union
 
 normalization
