@@ -36,6 +36,10 @@ multirow functions
 min,max,sum,avg,count
 groupby, having
 
-
-
 sequence
+
+normalization
+--redundacy/dependency of data
+
+
+Primary key,foreign key
