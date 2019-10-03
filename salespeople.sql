@@ -1,5 +1,12 @@
 create table salespeople(snum number(10),sname varchar(20),city varchar(20),comm number(5,3));
-
+create table salespeople (
+        snum number,
+        sname varchar(20),
+        city varchar(20),
+        comm decimal(3,2),
+        primary key(snum)
+);
+                                                                                        
 drop table salespeople;
 
 select * from salespeople;
