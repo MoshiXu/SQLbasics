@@ -1,5 +1,5 @@
 /*1.get the name of the salesperson serving each customer*/
-select sname from salespeople inner join cust on snum=cust.snum;
+select salespeople.sname from salespeople inner join cust on salespeople.snum=cust.snum;
 
 /*2.Produce the names and rating of all customers who have above average orders.*/
 select cust.cname cust.rating from (select avg(amt) from orders inner join orders on orders.snum=cust.snum);
