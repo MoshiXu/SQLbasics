@@ -11,11 +11,11 @@ select cust.cname, cust.city from cust inner join orders on orders.snum=cust.snu
 select * from orders inner join salespeople.snum=orders.snum on orders where salespeople.sname='Motika';
 
 /*5.All orders that are greater than the average for Oct 4.*/
-
+select * from orders where amt>(select avg(amt) from orders where odate like '04-OCT%');
 
 /*6.Find name and snum of all salesperson who have more than one customer.*/
-
-
+select name,snum from salespeople where (select count(*) from cust where salespeople.snum=cust.snum)>1;
 
 /*7.Get the customer name of all orders*/
+select * from orders inner join cust on orders.snum=cust.snum;
 
