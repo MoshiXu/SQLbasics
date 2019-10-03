@@ -50,3 +50,6 @@ normalization
 
 
 Primary key,foreign key
+
+rollback
+savepoint
