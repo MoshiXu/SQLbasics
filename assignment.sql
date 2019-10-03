@@ -15,6 +15,9 @@ select * from orders where amt>(select avg(amt) from orders where odate like '04
 
 /*6.Find name and snum of all salesperson who have more than one customer.*/
 select name,snum from salespeople where (select count(*) from cust where salespeople.snum=cust.snum)>1;
+select p.sname,p.snum from salespeople p where p.sname in (select s.sname from orders o inner 
+                                                           join salespeople s on s.snum = o.snum group by s.sname 
+                                                           having count(distinct o.cnum)>1);
 
 /*7.Get the customer name of all orders*/
 select * from orders inner join cust on orders.snum=cust.snum;
